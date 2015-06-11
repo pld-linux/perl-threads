@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
-#
+
 %define		pdir	threads
 %include	/usr/lib/rpm/macros.perl
 Summary:	threads - Perl interpreter-based threads
@@ -16,8 +16,6 @@ Source0:	http://www.cpan.org/modules/by-authors/id/J/JD/JDHEDDEN/threads-%{versi
 URL:		http://search.cpan.org/dist/threads/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-cp -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,6 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorarch}/threads.pm
 %dir %{perl_vendorarch}/auto/threads
-%attr(755,root,root) %{perl_vendorarch}/auto/threads/*.so
-%{_mandir}/man3/*
+%attr(755,root,root) %{perl_vendorarch}/auto/threads/threads.so
+%{_mandir}/man3/threads.3pm*
 %{_examplesdir}/%{name}-%{version}
