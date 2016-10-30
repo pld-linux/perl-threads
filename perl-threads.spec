@@ -7,7 +7,7 @@
 Summary:	threads - Perl interpreter-based threads
 Name:		perl-threads
 Version:	2.01
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
