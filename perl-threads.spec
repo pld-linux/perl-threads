@@ -6,13 +6,13 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	threads - Perl interpreter-based threads
 Name:		perl-threads
-Version:	2.16
-Release:	2
+Version:	2.21
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/J/JD/JDHEDDEN/threads-%{version}.tar.gz
-# Source0-md5:	e0539f6c0d11f59bd79e94920041fdce
+# Source0-md5:	45fa009703074f0b0b0d036cb23706e3
 URL:		http://search.cpan.org/dist/threads/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
