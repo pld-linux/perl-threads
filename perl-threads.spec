@@ -3,7 +3,6 @@
 %bcond_without	tests		# do not perform "make test"
 
 %define		pdir	threads
-%include	/usr/lib/rpm/macros.perl
 Summary:	threads - Perl interpreter-based threads
 Name:		perl-threads
 Version:	2.21
